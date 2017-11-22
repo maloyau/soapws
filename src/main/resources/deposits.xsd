@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://serhii.com" elementFormDefault="qualified">
+
+        <xs:element name="cashDeposit">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="1" name="id" type="xs:long" />
+                    <xs:element minOccurs="1" maxOccurs="1" name="tracenumber" type="xs:long" />
+                    <xs:element minOccurs="0" maxOccurs="1" name="terminalid" type="xs:string" />
+                    <xs:element minOccurs="1" maxOccurs="1" name="account" type="xs:long" />
+                    <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+                    <xs:element minOccurs="1" maxOccurs="1" name="depositTime" type="xs:long" />
+                    <xs:element minOccurs="1" maxOccurs="1" name="amount" type="xs:long" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="cashDepositResponse">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="cashDepositResult" type="xs:string" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+</xs:schema>
